@@ -25,10 +25,18 @@ public class DBHelper extends SQLiteOpenHelper{
     private static final String CONCERT_PHOTO= "Photo";
     ArrayList<String[]> wishList = new ArrayList<String[]>();
 
+    /**
+     * Creates a database if there is none.
+     * @param context
+     */
     public DBHelper (Context context){
         super (context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    /**
+     * Creates a table with a specific name and column values.
+     * @param db
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -41,6 +49,13 @@ public class DBHelper extends SQLiteOpenHelper{
 
         db.execSQL(table);
     }
+
+    /**
+     * If the app is updated then delete the old table.
+     * @param database
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         // DROP OLDER TABLE IF EXISTS
@@ -50,6 +65,11 @@ public class DBHelper extends SQLiteOpenHelper{
         onCreate(database);
     }
 
+    /**
+     * This adds a new entry to the wish list database.
+     * There are four values that each entry holds.
+     * @param concertDetails
+     */
     public void addConcert(String[] concertDetails){
         Log.i("Concert Details ", concertDetails[0]);
         SQLiteDatabase db = this.getWritableDatabase();
@@ -63,6 +83,12 @@ public class DBHelper extends SQLiteOpenHelper{
         db.insert(DATABASE_TABLE, null, values);
         db.close();
     }
+
+    /**
+     * This is called when the user would like to view the database entries.
+     * This returns all of the database values in an ArrayList<String[]>
+     * @return wishList
+     */
     public ArrayList<String[]> getData(){
         String query = "SELECT * FROM " + DATABASE_TABLE;
         SQLiteDatabase database = this.getReadableDatabase();

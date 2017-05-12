@@ -28,6 +28,12 @@ public class ConcertDetail extends AppCompatActivity{
     String[] array;
     protected  DBHelper mDBHelper;
 
+    /**
+     * This file is connected to the concert_view.xml file.
+     * When called the intent sent has the photo URL, details that are printed to the page.
+     * At the bottom left corner is a button to add the current concert to the wish list database.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -63,6 +69,11 @@ public class ConcertDetail extends AppCompatActivity{
 //        inflater.inflate(R.menu.my, menu);
 //        return true;
 //    }
+
+    /**
+     * This is passed the photo field and the url.
+     * It creates a link to the url and pushes the photo onto the page when it loads.
+     */
     private class DownloadImageFromInternet extends AsyncTask<String, Void, Bitmap> {
         ImageView imageView;
 

@@ -22,25 +22,44 @@ public class HandleXML {
 
     public volatile boolean parsingComplete = true;
 
+    /**
+     * sets the variable urlString to the parameter url
+     * @param url
+     */
     public HandleXML(String url){
         this.urlString = url;
     }
 
+    /**
+     * @return title
+     */
     public String getTitle(){
         return title;
     }
 
+    /**
+     * @return link
+     */
     public String getLink(){
         return link;
     }
 
+    /**
+     * @return decription
+     */
     public String getDescription(){
         return description;
     }
 
+    /**
+     * @return data
+     */
     public ArrayList<String[]> getData (){return data;}
 
-
+    /**
+     * Reads through the RSS feed and creates an ArrayList of String[] that contains the important event information.
+     * @param myParser
+     */
     public void parseXMLAndStoreIt(XmlPullParser myParser) {
         int event;
         String text=null;
@@ -93,6 +112,10 @@ public class HandleXML {
         }
     }
 
+    /**
+     * FetchXML connects to the RSS feed and creates a parser to read the file.
+     * @return data
+     */
     public ArrayList<String[]> fetchXML(){
         Thread thread = new Thread(new Runnable(){
             @Override

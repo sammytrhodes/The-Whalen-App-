@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 /**
- *
+ * A new page that shows the RSS feed that the events are parsed from.
  * @author Created by sammy on 3/7/2017.
  */
 

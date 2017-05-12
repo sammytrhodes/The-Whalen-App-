@@ -21,6 +21,13 @@ public class WishList extends AppCompatActivity {
 
     protected DBHelper mDBHelper;
 
+    /**
+     * Creates a connection to the SQLite database.
+     * This page is linked to the wish_list.xml file.
+     * Prints the list grabbed from the database onto the XML listview.
+     * When an item in the wish list is click it creates an Intent and passes information to the ConcertDetail class.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

@@ -18,6 +18,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * created by Samantha Rhodes
+ */
 public class MainActivity extends AppCompatActivity {
     EditText title,link,description;
     ListView info;
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
     protected DBHelper mDBHelper;
     private ArrayList<String[]> take2 = new ArrayList<String[]>();
 
+    /**
+     * This OnCreate function connects up with the activity_main.xml
+     * It starts by creating a connection with the SQLite database and the RSS feed.
+     * There are 2 button listeners for the clear search and to see the RSS feed
+     * Edit text setOnKeyListener function that filters the listview for the entered string.
+     * List view setItemOnClickListener which calls the ConcertDetail java file for a more detailed concert information.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,12 +129,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Inflates the menu at the top of the page.
+     * @param menu
+     * @return true
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.my, menu);
         return true;
     }
+
+    /**
+     *  When the Wish list field is selected on the menu it calls the WishList class.
+     * @param item
+     * @return true
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
 //        Toast.makeText(this, "Hello!!! ", Toast.LENGTH_SHORT).show();

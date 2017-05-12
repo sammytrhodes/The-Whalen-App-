@@ -15,10 +15,19 @@ import java.util.ArrayList;
 
 
 public class UserAdapter extends ArrayAdapter {
+
     public UserAdapter(Context context, ArrayList<String[]> users) {
         super(context, 0, users);
     }
 
+    /**
+     * Creates an adapter for the listview to interpret.
+     * The listview only shows the title of a given event.
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return convertView
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
@@ -33,10 +42,6 @@ public class UserAdapter extends ArrayAdapter {
         tvName.setText(user[0]);
         // Return the completed view to render on screen
         return convertView;
-    }
-
-    public void filter(){
-
     }
 
 }
