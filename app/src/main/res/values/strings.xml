@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Whalen App</string>
+    <string name="WishValues">Wish List</string>
+    <string name="WishList">Add to My Wish List</string>
+</resources>

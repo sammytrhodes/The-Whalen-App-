@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\sammy\Desktop\School\Testing\Chapter04\Chapter04\Completed Applications\MyApplication\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eeba74daae8c2cea52f53b389416648bd0d26b23">
+        <dex dex="C:\Users\sammy\Desktop\School\Testing\Chapter04\Chapter04\Completed Applications\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_62d2c7065596cb374662c12c32e18a4c0cd3519f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\sammy\Desktop\School\Testing\Chapter04\Chapter04\Completed Applications\MyApplication\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\sammy\Desktop\School\Testing\Chapter04\Chapter04\Completed Applications\MyApplication\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6a2c4c5102ea1c36d7acc2db1484942a185966fa\classes.dex" />
+    </item>
+
+</items>
